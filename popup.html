@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyborg Navigation Launcher</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
+
+    <style>
+        html,
+        body {
+            font-family: 'Redressed', cursive;
+            font-size: 15px;
+            margin: 0;
+            padding: 0;
+            min-height: 180px;
+            width: 386px;
+        }
+        
+        .modal {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-header {
+            display: flex;
+            align-items: flex-end;
+            border-bottom: 2px solid gray;
+        }
+        
+        #cursor {
+            font-size: 30px;
+            color: black;
+        }
+        
+        .modal-items {
+            margin: 2px 5px;
+        }
+        
+        .version {
+            color: chartreuse;
+            font-size: 18px;
+            height: fit-content;
+        }
+        
+        .flex-container {
+            display: flex;
+        }
+        
+        .flex {
+            opacity: 1;
+            transition: opacity 0.25s ease-in;
+        }
+        
+        .flex:hover {
+            opacity: 0.6;
+        }
+        
+        .flex .fa {
+            font-size: 50px;
+            margin: 4px 15px;
+        }
+        
+        #modalHeading,
+        h1 {
+            font-size: 30px;
+            margin-bottom: 4px;
+            color: navy;
+        }
+        
+        a:link,
+        a:visited {
+            color: rgb(0, 0, 0);
+            outline: 0;
+            text-decoration: none;
+        }
+        
+        img {
+            width: 75px;
+            height: 75px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="modal">
+        <div class="modal-header">
+            <img src="images/icon.png" alt="Cyborg Navigation" class="logo-icon modal-items">
+            <h1 class="logo modal-items">
+                <span id="modalHeading"></span><span id="cursor">|</span>
+            </h1>
+            <span class="version modal-items" id="version-id"></span>
+        </div>
+        <div class="modal-content">
+            <p>Easily navigate across software development learning websites</p>
+        </div>
+        <div class="modal-icons">
+            <div class="flex-container">
+                <div class="flex">
+                    <a href="https://picoctf.org/" target="_blank"><img class="fa" src="images/icons8-hacker-50.png" alt="picoctf.org"></a>
+                </div>
+                <div class="flex">
+                    <a href="https://www.youtube.com/channel/UCeVMnSShP_Iviwkknt83cww" target="_blank"><img src="images/icons8-iron-man-100.png" class="fa" alt=""></a>
+                </div>
+                <div class="flex">
+                    <a href="https://www.geeksforgeeks.org/puzzles/" target="_blank"><img src="images/icons8-puzzle-48.png" alt="gfgpuzzle" class="fa"></a>
+                </div>
+                <div class="flex">
+                    <a href="https://codeforces.com/problemset" target="_blank"><img src="images/icons8-mind-map.gif" alt="" class="fa"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="popup.js"></script>
+
+</html>
